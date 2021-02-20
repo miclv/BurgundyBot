@@ -1,4 +1,10 @@
 import discord
+import os
+
+from dotenv import load_dotenv
+
+load_dotenv()
+Token = os.getenv('DISCORD_TOKEN')
 
 
 class MyClient(discord.Client):
@@ -11,4 +17,4 @@ class MyClient(discord.Client):
 
 
 client = MyClient()
-client.run('ODEyMzkzNTAyNjMzMzYxNDM5.YDAGaA.ry1Pg_sO2Q9_C-BrB-5c0RRNffc')
+client.run(Token)
